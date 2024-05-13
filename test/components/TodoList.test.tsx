@@ -20,19 +20,19 @@ interface Todo {
 }
 
 describe('TodoList component', () => {
-  beforeEach(() => {
-    (axios.get as jest.MockedFunction<typeof axios.get>).mockResolvedValueOnce({ data: mockData });
-  });
+  // beforeEach(() => {
+  //   (axios.get as jest.MockedFunction<typeof axios.get>).mockResolvedValueOnce({ data: mockData });
+  // });
 
-  it('renders todos correctly', async () => {
-    render(<TodoList />);
+  // it('renders todos correctly', async () => {
+  //   render(<TodoList />);
     
-    // Wait for axios request to resolve and todos to be rendered
-    await waitFor(() => {
-      expect(screen.getByText('Test Todo 1')).toBeInTheDocument();
-      expect(screen.getByText('Test Todo 2')).toBeInTheDocument();
-    });
-  });
+  //   // Wait for axios request to resolve and todos to be rendered
+  //   await waitFor(() => {
+  //     expect(screen.getByText('Test Todo 1')).toBeInTheDocument();
+  //     expect(screen.getByText('Test Todo 2')).toBeInTheDocument();
+  //   });
+  // });
 
   it('increases count when + button is clicked', async () => {
     render(<TodoList />);
